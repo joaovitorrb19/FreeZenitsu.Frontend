@@ -1,0 +1,43 @@
+
+table{
+    table-layout: fixed;
+    display: table;
+}
+
+
+
+.cell{ /* Defina o tamanho desejado para a célula */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o tamanho da célula */
+  text-overflow: ellipsis; 
+  text-align: center;
+}
+
+.btnadd{
+    text-align: center;
+    vertical-align: center;
+}
+
+.btneditar{
+background-color: rgb(127, 212, 252);
+color: black;
+}
+
+.btnexcluir{
+background-color: rgb(255, 0, 0);
+color: black;
+}
+
+
+  @media(max-width:768px){
+    table{
+        width: 90%;
+        margin: auto;
+    }
+  }
+
+  @media(min-width:769px){
+    table{
+        margin: auto;
+        width: 40%
+  }
+}

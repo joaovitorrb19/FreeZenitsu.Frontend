@@ -1,0 +1,10 @@
+<div mat-dialog-content>
+    <p>Atualizar {{nomeAntes}}</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="nomeDepois">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="UpdateCategoria()">Confirmar</button>
+    <button mat-button color="warn" (click)="Close()">Cancelar</button>
+  </div>

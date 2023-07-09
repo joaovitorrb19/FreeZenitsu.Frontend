@@ -1,0 +1,17 @@
+<div style="display: flex; justify-content: center; align-items: center;margin-top: 10px;">
+    <button class="btnadd" mat-raised-button  (click)="AbrirModalAdd()">Adicionar</button>
+    </div>
+    <div>
+        <table>
+            <thead >
+                <th>Nome Categoria</th>
+                <th>Opções</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of listaCategorias">
+                    <td class="cell">{{item.nome}}</td>
+                    <td class="cell"><button mat-button (click)="AbrirModalUpdate(item)">Editar</button><button mat-button color="warn" (click)="AbriModalDelete(item)">Excluir</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
