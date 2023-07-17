@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { Categoria } from 'src/app/interfaces/categoria';
 import { CategoriaserviceService } from 'src/app/services/categoria/categoriaservice.service';
 import { MatDialog } from '@angular/material/dialog';
-import { AddcategoriamodalComponent } from '../modaiscategoria/addcategoriamodal/addcategoriamodal.component';
-import { RemovecategoriamodalComponent } from '../modaiscategoria/removecategoriamodal/removecategoriamodal.component';
-import { UpdatecategoriamodalComponent } from '../modaiscategoria/updatecategoriamodal/updatecategoriamodal.component';
+import { AddcategoriamodalComponent } from '../addcategoria/modaiscategoria/addcategoriamodal/addcategoriamodal.component';
+import { RemovecategoriamodalComponent } from '../addcategoria/modaiscategoria/removecategoriamodal/removecategoriamodal.component';
+import { UpdatecategoriamodalComponent } from '../addcategoria/modaiscategoria/updatecategoriamodal/updatecategoriamodal.component';
 
 
 @Component({
@@ -25,7 +25,7 @@ export class AddcategoriaComponent {
   AbrirModalAdd(){
     this.dialog.open(AddcategoriamodalComponent,{
       width:'300px',
-      height:'120px'
+      height:'200px'
     })
   }
 

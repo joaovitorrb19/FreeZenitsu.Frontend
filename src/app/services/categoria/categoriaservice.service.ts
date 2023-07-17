@@ -10,14 +10,14 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class CategoriaserviceService {
 
-  
-  constructor(private http : HttpClient) { }
-
   headers = {
     headers: new HttpHeaders({
       'Content-Type': 'text/json'
     })
   }
+
+  constructor(private http : HttpClient) { }
+
 
   getCategoria() : Observable<Categoria[]> {
     return this.http.get<Categoria[]>('https://localhost:7234/categoria/get');

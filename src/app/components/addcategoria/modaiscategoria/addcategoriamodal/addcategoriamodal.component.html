@@ -1,0 +1,17 @@
+<h1 mat-dialog-title style="text-align: center;">Adicionar Categoria</h1>
+<mat-form-field class="fullwidth">
+  <mat-label>Nome</mat-label>
+  <input type="text"  id="name" matInput [formControl]="nameForm" [errorStateMatcher]="matcher"
+         placeholder="Ex. pat@example.com">
+  <mat-error *ngIf="nameForm.hasError('email') && !nameForm.hasError('required')">
+    Please enter a valid email address
+  </mat-error>
+  <mat-error *ngIf="nameForm.hasError('required')">
+    Nome é <strong>obrigatório</strong>
+  </mat-error>
+</mat-form-field>
+<div style="text-align: center;">
+  <button mat-button *ngIf="!nameForm.invalid; else invalido" (click)="Adicionar()">Adicionar</button>
+  <ng-template #invalido><button mat-button disabled>Adicionar</button></ng-template>
+  <button mat-button color="warn" (click)="Cancelar()">Cancelar</button>
+</div>

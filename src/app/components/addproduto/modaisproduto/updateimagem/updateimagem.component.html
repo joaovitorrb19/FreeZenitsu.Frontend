@@ -1,0 +1,12 @@
+<h1 mat-dialog-title style="text-align: center;">Atualizar Imagem</h1>
+<div mat-dialog-content>
+        <span>Foto Cadastrada</span>
+        <img src="assets\arquivos\{{data.nomeImagem}}" style="width: 200px; height: 150px;">
+        <input  type="file" (change)="AtualizarImagem($event)" style="text-overflow: ellipsis;overflow: hidden;">
+        <div *ngIf="ImagemSelecionadaUrl">
+            <span>Nova Foto</span>
+            <img [src]="ImagemSelecionadaUrl" style="width: 200px;height: 150px;">
+        </div>
+    <a mat-button (click)="PutImagem()">Atualizar</a>
+    <a mat-button color="warn" (click)="Close()">Cancelar</a>
+</div>

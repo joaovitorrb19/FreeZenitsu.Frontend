@@ -1,6 +1,10 @@
 <div class="navegacao">
   <div>
-    <img class="menu" width="25" height="30" src="https://img.icons8.com/ios/50/menu--v1.png" alt="menu--v1"/>
+    <a mat-button [matMenuTriggerFor]="menu"><img class="menu" width="25" height="30" src="https://img.icons8.com/ios/50/menu--v1.png" alt="menu--v1"/></a>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="addcategoria">Categorias</button>
+      <button mat-menu-item routerLink="addproduto">Produtos</button>
+    </mat-menu>
   </div>
   <div class="divpesquisa">
     <input class="inputpesquisa" type="text">
@@ -10,7 +14,6 @@
     <a routerLink="carrinho"><img class="carrinho" width="45" height="48" src="https://img.icons8.com/color/48/shopping-cart--v1.png" alt="shopping-cart--v1"/></a> 
   </div>
 </div>
-
 
 <router-outlet></router-outlet>
 

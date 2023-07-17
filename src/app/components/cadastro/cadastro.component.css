@@ -1,0 +1,13 @@
+.containercadastro{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+    width: 320px;
+    height: auto;
+    background-color: rgb(206, 203, 203);
+}
+
+.widthh{
+    width: 150px;
+}

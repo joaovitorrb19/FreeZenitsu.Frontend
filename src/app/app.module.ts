@@ -13,15 +13,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog'
 import {MatInputModule} from '@angular/material/input'
-import { AddcategoriamodalComponent } from './components/modaiscategoria/addcategoriamodal/addcategoriamodal.component'
+import { AddcategoriamodalComponent } from './components/addcategoria/modaiscategoria/addcategoriamodal/addcategoriamodal.component'
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { RemovecategoriamodalComponent } from './components/modaiscategoria/removecategoriamodal/removecategoriamodal.component';
-import { UpdatecategoriamodalComponent } from './components/modaiscategoria/updatecategoriamodal/updatecategoriamodal.component';
-import { AddprodutomodalComponent } from './components/modaisproduto/addprodutomodal/addprodutomodal.component';
-import { RemoveprodutomodalComponent } from './components/modaisproduto/removeprodutomodal/removeprodutomodal.component';
-import { UpdateprodutomodalComponent } from './components/modaisproduto/updateprodutomodal/updateprodutomodal.component';
-import {MatSelectModule} from '@angular/material/select'
+import { RemovecategoriamodalComponent } from './components/addcategoria/modaiscategoria/removecategoriamodal/removecategoriamodal.component';
+import { UpdatecategoriamodalComponent } from './components/addcategoria/modaiscategoria/updatecategoriamodal/updatecategoriamodal.component';
+import { AddprodutomodalComponent } from './components/addproduto/modaisproduto/addprodutomodal/addprodutomodal.component';
+import { RemoveprodutomodalComponent } from './components/addproduto/modaisproduto/removeprodutomodal/removeprodutomodal.component';
+import { UpdateprodutomodalComponent } from './components/addproduto/modaisproduto/updateprodutomodal/updateprodutomodal.component';
+import {MatSelectModule} from '@angular/material/select';
+import { HomecomponentComponent } from './components/homecomponent/homecomponent.component'
+import {MatMenuModule} from '@angular/material/menu';
+import { UpdateimagemComponent } from './components/addproduto/modaisproduto/updateimagem/updateimagem.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +38,10 @@ import {MatSelectModule} from '@angular/material/select'
     UpdatecategoriamodalComponent,
     AddprodutomodalComponent,
     RemoveprodutomodalComponent,
-    UpdateprodutomodalComponent
+    UpdateprodutomodalComponent,
+    HomecomponentComponent,
+    UpdateimagemComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,8 @@ import {MatSelectModule} from '@angular/material/select'
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatMenuModule
   ],
   providers: [
     ErrorhandlerService,{

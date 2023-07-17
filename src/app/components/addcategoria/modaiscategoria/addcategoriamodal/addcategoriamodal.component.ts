@@ -13,7 +13,7 @@ import { CategoriaserviceService } from 'src/app/services/categoria/categoriaser
 export class AddcategoriamodalComponent{
 
   matcher = new Addcategoriainputvalidator()
-  emailForm = new FormControl('',[Validators.required,Validators.email])
+  nameForm = new FormControl('',[Validators.required])
 
 
   constructor(
@@ -24,7 +24,7 @@ export class AddcategoriamodalComponent{
     Adicionar():void{
        let valor = ''
 
-       valor = this.emailForm.value ?? '' ;
+       valor = this.nameForm.value ?? '' ;
 
       this.service.postCategoria(valor).subscribe()
       
