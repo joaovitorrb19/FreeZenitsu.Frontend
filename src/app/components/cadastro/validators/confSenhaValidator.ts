@@ -1,6 +1,6 @@
 import { AbstractControl, FormControl, ValidationErrors, ValidatorFn } from "@angular/forms";
 
-export function customValidator(control1 : string) : ValidatorFn{
+export function confSenhaValidator(control1 : string) : ValidatorFn{
 
     return (control :AbstractControl) : ValidationErrors | null => {
 
@@ -11,5 +11,6 @@ export function customValidator(control1 : string) : ValidatorFn{
         }
 
         return null
+        
     }
 }

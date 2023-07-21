@@ -3,32 +3,45 @@
     <mat-form-field style="width: 250px;">
         <mat-label>Email</mat-label>
         <input matInput type="text" formControlName="email">
+        <mat-error *ngIf="VerificarErroTouched('email','required')">Obrigatório.</mat-error>
+        <mat-error *ngIf="VerificarErroSujo('email','email')">Inválido.</mat-error>
     </mat-form-field>
     <mat-form-field style="width: 250px;">
         <mat-label>Nome Completo</mat-label>
         <input matInput type="text" formControlName="nomeCompleto">
+        <mat-error *ngIf="VerificarErroTouched('nomeCompleto','required')">Obrigatório.</mat-error>
+        <mat-error *ngIf="VerificarErroSujo('nomeCompleto','nomeCompleto')">Inválido.</mat-error>
     </mat-form-field>
     <mat-form-field style="width: 150px;">
         <mat-label>CPF</mat-label>
         <input matInput type="text" formControlName="cpf">
+        <mat-error *ngIf="VerificarErroTouched('cpf','required')">Obrigatório.</mat-error>
+        <mat-error *ngIf="VerificarErroSujo('cpf','cpf')">Inválido.</mat-error>
     </mat-form-field>
     <mat-form-field style="width: 150px;">
         <mat-label>Telefone</mat-label>
         <input matInput type="text" formControlName="telefone">
+        <mat-error *ngIf="VerificarErroTouched('telefone','required')">Obrigatório.</mat-error>
+        <mat-error *ngIf="VerificarErroSujo('telefone','telefone')">Inválido.</mat-error>
     </mat-form-field>
-   <mat-form-field style="width: 180px;">
+   <mat-form-field style="width:180px;">
     <mat-label>Data de Nascimento</mat-label>
-    <input matInput type="date" formControlName="dataNasc">
+    <input matInput type="date" formControlName="dataNascimento">
+    <mat-error *ngIf="VerificarErroTouched('dataNascimento','required')">Obrigatório.</mat-error>
+    <mat-error *ngIf="VerificarErroSujo('dataNascimento','anoNasc')">Inválido.</mat-error>
    </mat-form-field>
-   <mat-form-field style="width: 150px;">
+   <mat-form-field style="width:150px;" >
     <mat-label>Senha</mat-label>
     <input matInput type="password" formControlName="senha">
+    <mat-error *ngIf="VerificarErroTouched('senha','required')">Obrigatório.</mat-error>
 </mat-form-field>
 <mat-form-field style="width: 150px;">
     <mat-label>Confirmação</mat-label>
-    <input matInput type="password" formControlName="confirmacaoSenha" (change)="AdicionarValidator()">
+    <input matInput type="password" formControlName="confirmacaoSenha" (keypress)="AdicionarValidator()">
+    <mat-error *ngIf="VerificarErroTouched('confirmacaoSenha','required')">Obrigatório.</mat-error>
+    <mat-error *ngIf="VerificarErroSujo('confirmacaoSenha','confPass')">Diferente.</mat-error>
 </mat-form-field>
-<a mat-button>Cadastrar</a>
-<a mat-button color="warn">Cancelar</a>
+<a mat-button [disabled]="this.form.invalid" (click)="ConfirmarCadastro()">Cadastrar</a>
+<a mat-button color="warn" >Cancelar</a>
 </div>
 </form>
